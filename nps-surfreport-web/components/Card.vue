@@ -4,7 +4,11 @@ defineProps({
   name: {
     type: String,
     required: true
-  }
+  },
+  email:String,
+  phone:String,
+  address:String,
+  registeredAt:String
 });
 
 
@@ -13,10 +17,15 @@ defineProps({
 <template>
 
   <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="~/assets/Dynamic_wave_inkscape.png" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">
+        email: {{ email }}
+        phone: {{ phone }}
+        addres: {{ address }}
+        registeredAt : {{  registeredAt }}
+      </p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>

@@ -3,9 +3,11 @@
 </script>
 
 <template>
-    <div>
+    <div class="container">
         <h1>NPS | Surf Report</h1>
-        <Card v-for=" customer in customers" :key="customer.id" :="customer"/>
+        <div class="grid">
+            <Card v-for=" customer in customers" :key="customer.id" :="customer"/>
+        </div>
     </div>
 </template>
 
