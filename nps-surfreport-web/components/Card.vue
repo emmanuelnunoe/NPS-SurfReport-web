@@ -26,7 +26,7 @@ defineProps({
         addres: {{ address }}
         registeredAt : {{  registeredAt }}
       </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <NuxtLink :to="{name:'surfreport-name', params:{name: name}}" class="btn btn-primary"> See Location</NuxtLink>
     </div>
   </div>
   
