@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { customers } from '~/testingdata/customer.json'
+    import { customers } from '../../testingdata/customer.json';
 </script>
 
 <template>

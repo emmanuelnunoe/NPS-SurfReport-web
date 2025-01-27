@@ -1,5 +1,5 @@
 
-<script setup>
+<script  lang="ts" setup>
 defineProps({
   name: {
     type: String,
@@ -26,7 +26,7 @@ defineProps({
         addres: {{ address }}
         registeredAt : {{  registeredAt }}
       </p>
-      <NuxtLink :to="{name:'surfreport-name', params:{name: name}}" class="btn btn-primary"> See Location</NuxtLink>
+      <NuxtLink :to="{name:'surfreport-name', params:{name: name}}" class="btn btn-primary"> See Location</NuxtLink> 
     </div>
   </div>
   
