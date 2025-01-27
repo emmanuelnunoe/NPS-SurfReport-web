@@ -16,7 +16,7 @@ import Index from '~/pages/index.vue';
             <NuxtLink :to="{name:'index'}" class="nav-link active" aria-current="page">Home</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink :to="{name:'surfreport'}"  class="nav-link active" aria-current="page">surfreport</NuxtLink>
+            <NuxtLink :to="{name:'locations'}"  class="nav-link active" aria-current="page">surfreport</NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink :to="{name:'contact'}"  class="nav-link active" aria-current="page">contact</NuxtLink>
