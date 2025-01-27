@@ -13,13 +13,13 @@ import Index from '~/pages/index.vue';
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <NuxtLink :to="{name:'index'}" class="nav-link active" aria-current="page">Home</NuxtLink>
+            <NuxtLink :to="{name:'index'}" class="nav-link" exact-active-class="active" aria-current="page">Home</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink :to="{name:'locations'}"  class="nav-link active" aria-current="page">surfreport</NuxtLink>
+            <NuxtLink :to="{name:'locations'}"  class="nav-link" exact-active-class="active" aria-current="page">surfreport</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink :to="{name:'contact'}"  class="nav-link active" aria-current="page">contact</NuxtLink>
+            <NuxtLink :to="{name:'contact'}"  class="nav-link" exact-active-class="active" aria-current="page">contact</NuxtLink>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -30,3 +30,10 @@ import Index from '~/pages/index.vue';
     </div>
   </nav>
 </template>
+
+
+<style>
+.active {
+  border-bottom: 2px solid rgb(29, 223, 236);
+}
+</style>

@@ -2,6 +2,16 @@
     const route = useRoute();
     const name = route.params.name;
     const email = route.params.email;
+
+    definePageMeta({
+        validate: route => {
+            const regex =   /^[a-zA-ZáéíóúÁÉÍÓÚ .@ ]+$/;
+            const expresion = new RegExp(regex)
+            const name = route.params.name as string
+
+            return expresion.test(name)
+        }
+    })
 </script>
 
 
