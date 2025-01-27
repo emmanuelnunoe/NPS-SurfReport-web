@@ -1,7 +1,7 @@
 <script  lang="ts" setup>
     const route = useRoute();
-    const name = route.params.name;
-    const email = route.params.email;
+    const name = route.params.title;
+    const email = route.params.category;
 
     definePageMeta({
         validate: route => {

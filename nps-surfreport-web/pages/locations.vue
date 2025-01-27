@@ -1,12 +1,14 @@
 <script setup lang="ts">
     import { customers } from '../testingdata/customer.json';
+    const {data, error, pending } = await useFetch('https://dummyjson.com/products');
+    console.log("data :", data)
 </script>
 
 <template>
-    <div class="container">
+    <div class="container"> 
         <h1>NPS | Surf Report</h1>
         <div class="grid">
-            <Card v-for=" customer in customers" :key="customer.id" :="customer"/>
+            <Card v-for=" product in data.products" :key="product.id" :product="product"/>
         </div>
     </div>
 </template>

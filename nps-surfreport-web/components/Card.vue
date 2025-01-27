@@ -1,32 +1,18 @@
 
 <script  lang="ts" setup>
-defineProps({
-  name: {
-    type: String,
-    required: true
-  },
-  email:String,
-  phone:String,
-  address:String,
-  registeredAt:String
-});
-
-
+defineProps(['product']);
 </script>
 
 <template>
 
   <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="~/assets/Dynamic_wave_inkscape.png" alt="Card image cap">
+    <img class="card-img-top" :src= "product.thumbnail" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">{{ name }}</h5>
+      <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text">
-        email: {{ email }}
-        phone: {{ phone }}
-        addres: {{ address }}
-        registeredAt : {{  registeredAt }}
+        category: {{ product.category }}
       </p>
-      <NuxtLink :to="{name:'report-email-name', params:{name: name, email}}" class="btn btn-primary"> See Location</NuxtLink> 
+      <NuxtLink :to="{name:'products-category-title', params:{title: product.title, category: product.category}}" class="btn btn-primary"> See Location</NuxtLink> 
     </div>
   </div>
   
