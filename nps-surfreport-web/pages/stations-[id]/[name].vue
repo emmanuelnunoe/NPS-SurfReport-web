@@ -36,7 +36,7 @@
         <div v-else-if="!data">No data</div>
         <div v-else-if="data.tides.length === 0">No tides</div>
         <div v-else>
-            <h2  class="mt-4">Today's Tides</h2>
+            <h2  class="mt-4">Today's Tides : {{ data.tides[0].date }}</h2>
             <div v-for="item in data.tides">
                 <div class="mt-3">
                     <hr/>
