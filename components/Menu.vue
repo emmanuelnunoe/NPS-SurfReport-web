@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import Index from '~/pages/index.vue';
-
-</script>
-
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">

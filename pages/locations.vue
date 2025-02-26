@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    import type { RefSymbol } from '@vue/reactivity';
     const {data, error, pending } = await useFetch('https://noaa-tides.p.rapidapi.com/stations',{
         headers:{
             'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com',
