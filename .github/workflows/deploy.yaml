@@ -19,6 +19,8 @@ jobs:
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v3
+      with:
+        path: ${{ vars.NUXT_APP_BASE_URL }}
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
