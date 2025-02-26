@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   target: 'static',
   ssr: false,
   router: {
-    base: 'https://emmanuelnunoe.github.io/NPS-SurfReport-web/'
+    base: 'NPS-SurfReport-web'
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
