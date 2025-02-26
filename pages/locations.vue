@@ -1,10 +1,10 @@
 <script setup lang="ts">
-    // const {data, error, pending } = await useFetch('https://noaa-tides.p.rapidapi.com/stations',{
-    //     headers:{
-    //         'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com',
-    //         'X-RapidAPI-Key': '7a5d40ba4fmsha7bab8f9481e8d5p118da3jsn758dd8cf7f36'
-    //     }
-    // });
+    const {data, error, pending } = await useFetch('https://noaa-tides.p.rapidapi.com/stations',{
+        headers:{
+            'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com',
+            'X-RapidAPI-Key': '7a5d40ba4fmsha7bab8f9481e8d5p118da3jsn758dd8cf7f36'
+        }
+    });
 </script>
 
 <template>

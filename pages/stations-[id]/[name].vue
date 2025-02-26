@@ -13,12 +13,12 @@
     })
 
 
-    // const {data, error, pending } = await useFetch( `https://noaa-tides.p.rapidapi.com/stations/1611400/tides?`,{
-    //     headers:{
-    //         'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com',
-    //         'X-RapidAPI-Key': '554b5a7e53msh1202eed08caa67bp16d5adjsnb39915c07f4b'
-    //     }
-    // });
+    const {data, error, pending } = await useFetch( `https://noaa-tides.p.rapidapi.com/stations/1611400/tides?`,{
+        headers:{
+            'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com',
+            'X-RapidAPI-Key': '554b5a7e53msh1202eed08caa67bp16d5adjsnb39915c07f4b'
+        }
+    });
 </script>
 
 
@@ -27,7 +27,7 @@
         <NuxtLink to="/locations"  class="btn btn-primary mt-4 mb-4"> < Back</NuxtLink>
         <br/>
         <div class="text-center">
-        <!-- <img class="card-img-top" src= "../../assets/Dynamic_wave_inkscape.png" alt="Station image" style="width: 10%; height: 10%;"> -->
+        <img class="card-img-top" src= "../../assets/Dynamic_wave_inkscape.png" alt="Station image" style="width: 10%; height: 10%;">
         <h3>{{ name }}</h3>
         </div>
 
