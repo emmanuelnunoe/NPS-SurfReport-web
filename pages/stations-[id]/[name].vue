@@ -3,14 +3,14 @@
     const name = route.params.name;
     const id = route.params.id;
 
-    definePageMeta({
-        validate: route => {
-            const regex =   /^[a-zA-ZáéíóúÁÉÍÓÚ .@,]+$/;
-            const expresion = new RegExp(regex)
-            const name = route.params.name as string
-            return expresion.test(name)
-        }
-    })
+    // definePageMeta({
+    //     validate: route => {
+    //         const regex =   /^[a-zA-ZáéíóúÁÉÍÓÚ .@,]+$/;
+    //         const expresion = new RegExp(regex)
+    //         const name = route.params.name as string
+    //         return expresion.test(name)
+    //     }
+    // })
 
 
     const {data, error, pending } = await useFetch( `https://noaa-tides.p.rapidapi.com/stations/1611400/tides?`,{
