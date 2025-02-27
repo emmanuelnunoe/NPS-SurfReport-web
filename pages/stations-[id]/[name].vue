@@ -13,12 +13,12 @@
     // })
 
 
-    const {data, error, pending } = await useFetch( `https://noaa-tides.p.rapidapi.com/stations/1611400/tides?`,{
-        headers:{
-            'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com',
-            'X-RapidAPI-Key': '554b5a7e53msh1202eed08caa67bp16d5adjsnb39915c07f4b'
-        }
-    });
+    // const {data, error, pending } = await useFetch( `https://noaa-tides.p.rapidapi.com/stations/1611400/tides?`,{
+    //     headers:{
+    //         'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com',
+    //         'X-RapidAPI-Key': '554b5a7e53msh1202eed08caa67bp16d5adjsnb39915c07f4b'
+    //     }
+    // });
 </script>
 
 
