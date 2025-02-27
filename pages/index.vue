@@ -1,17 +1,25 @@
 <template>
     <div>
-        <h1>Page home</h1>
-        <h1>Welcome to My Nuxt.js App</h1>
-        <VideoPlayer />
+        <h1>Welcome to NPS Surf Forecast App</h1>
+        <VIdeoBackground />
     </div>
 </template>
 
 <script>
-import VideoPlayer from '~/components/VideoPlayer.vue';
+import { VIdeoBackground } from '#components';
 
 export default {
   components: {
-    VideoPlayer,
+    VIdeoBackground,
   },
 }
 </script>
+
+<style scoped>
+.content {
+  position: relative;
+  z-index: 1; /* To ensure the content stays above the video */
+  text-align: center;
+  color: white; /* Adjust text color to make it readable against the video background */
+}
+</style>
