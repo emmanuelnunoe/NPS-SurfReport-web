@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h1>See conditions, for sea sessions.</h1>
-        <h2>NPS | Surf Report</h2>
+        <h1>NPS</h1>
+        <h2>Surf Report</h2>
+        <h3>See conditions, for sea sessions.</h3>
         <VIdeoBackground />
     </div>
 </template>
@@ -20,22 +21,29 @@ export default {
 h1{
     margin-top: 20%;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 800;
-    color: white;
 }
 
-h1, h2{
+h1, h2, h3{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(44, 44, 44);
 }
 
 h2{
     margin-top: 5%;
     text-align: center;
-    font-size: 1.5em;
-    font-weight: 400;
-    color: rgb(44, 44, 44);
+    font-size: 2em;
+    font-weight: 600;
 }
+
+h3{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+}
+
 
 .content {
   position: relative;
