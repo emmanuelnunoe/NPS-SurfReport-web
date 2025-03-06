@@ -1,8 +1,9 @@
 <template>
     <div>
-        <h1>NPS</h1>
-        <h2>Surf Report</h2>
-        <h3>See conditions, for sea sessions.</h3>
+        <h2>NPS</h2>
+        <h3>Surf Report</h3>
+        <h1 class="col-10 text-center">Surf Smarter, Check Conditions First!</h1>
+          <button class="btn btn-light btn-lg">See report</button>
         <VIdeoBackground />
     </div>
 </template>
@@ -18,11 +19,22 @@ export default {
 </script>
 
 <style scoped>
+button{
+  margin: auto;
+  text-align: center;
+  font-size: 1.7em;
+  margin-left: 15%;
+  margin-top: 10%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
 h1{
     margin-top: 20%;
+    margin-left: 10%;
     text-align: center;
-    font-size: 4em;
-    font-weight: 800;
+    font-size: 3em;
+    font-weight: 400;
 }
 
 h1, h2, h3{
@@ -33,17 +45,18 @@ h1, h2, h3{
 h2{
     margin-top: 5%;
     text-align: center;
+    margin-left: 10%;
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 700;
+    width: 80%;
 }
 
 h3{
     margin-top: 5%;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 400;
 }
-
 
 .content {
   position: relative;
