@@ -1,9 +1,9 @@
 <template>
     <div class="background-main">
-        <h2>NPS</h2>
-        <h3>Surf Report</h3>
         <h1 class="col-10 text-center">Surf Smarter, Check Conditions First!</h1>
-        <button class="btn btn-light btn-lg btn-report">See report</button>
+        <button class="btn btn-light  btn-report button-main">See map</button>
+        <p class="text-center">-or-</p>
+        <input type="text" class="form-control search"  id="search" placeholder="Location name / ZipCode"/>
     </div>
 </template>
 
@@ -18,15 +18,29 @@ export default {
 </script>
 
 <style scoped>
-.btn-report{
-  margin-bottom: 10%;
-}
-.background-main{
-background-color: aquamarine;
-box-shadow: 0 0 100px 0 rgba(74, 74, 74, 0.306);
+.search{
+  margin: auto;
+  display: block;
+  width: 80%;
+  border-radius: 10em;
 }
 
-button{
+.btn-report{
+  margin-bottom: 5%;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.background-main{
+padding-top: 1em;
+background-color: aquamarine;
+box-shadow: 0 0 100px 0 rgba(74, 74, 74, 0.306);
+padding-bottom: 20%;
+
+}
+
+.button-main{
   margin: auto;
   text-align: center;
   font-size: 1.7em;
@@ -63,12 +77,5 @@ h3{
     text-align: center;
     font-size: 1.5em;
     font-weight: 400;
-}
-
-.content {
-  position: relative;
-  z-index: 1; /* To ensure the content stays above the video */
-  text-align: center;
-  color: white; /* Adjust text color to make it readable against the video background */
 }
 </style>
