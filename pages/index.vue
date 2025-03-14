@@ -1,10 +1,9 @@
 <template>
-    <div>
+    <div class="background-main">
         <h2>NPS</h2>
         <h3>Surf Report</h3>
         <h1 class="col-10 text-center">Surf Smarter, Check Conditions First!</h1>
-          <button class="btn btn-light btn-lg">See report</button>
-        <VIdeoBackground />
+        <button class="btn btn-light btn-lg btn-report">See report</button>
     </div>
 </template>
 
@@ -19,6 +18,14 @@ export default {
 </script>
 
 <style scoped>
+.btn-report{
+  margin-bottom: 10%;
+}
+.background-main{
+background-color: aquamarine;
+box-shadow: 0 0 100px 0 rgba(74, 74, 74, 0.306);
+}
+
 button{
   margin: auto;
   text-align: center;
@@ -34,7 +41,7 @@ h1{
     margin-left: 10%;
     text-align: center;
     font-size: 3em;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h1, h2, h3{
