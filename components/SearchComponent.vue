@@ -51,7 +51,12 @@ export default defineComponent({
       filteredResults.value = items.value.filter((item) =>
         item.toLowerCase().includes(query.value.toLowerCase())
       );
-      showDropdown.value = true;
+      if(query.value === '') {
+        filteredResults.value = [];
+        showDropdown.value = false;
+      }else{
+        showDropdown.value = true;
+      }
     };
 
     const closeDropdown = () => {
@@ -103,13 +108,14 @@ export default defineComponent({
 }
 
 .dropdown {
-  position: absolute;
-  top: -150%; /* Adjust this value based on your layout */
+  position:absolute;
+  top: -8em; /* Adjust this value based on your layout */
   left: 0;
   width: 100%;
-  background: #fff;
+  min-height: 8em;
+  background: #fffffff3;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px relative5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
