@@ -1,24 +1,29 @@
 <template>
-  <div lass="search-container" ref="searchContainer">
-    <input type="text" 
-    v-model="query" 
-    class="form-control search" 
-    id="search" placeholder="Location name / ZipCode"
-    @input="onInput"
-    @focus="showDropdown = true"
+  <div class="search-container" ref="searchContainer">
+    <input
+      type="text"
+      v-model="query"
+      class="form-control search" 
+      placeholder="Search..."
+      @input="onInput"
+      @focus="showDropdown = true"
     />
     <button class="btn btn-primary">Search</button>
+
     <div
-    v-if="showDropdown && filteredResults.length > 0"
-    class="dropdown">
-    <button class="close-btn" @click="closeDropdown">X</button>
-    <ul>
-      <li v-for="(result, index) in filteredResults" :key="index"
-      @click="selectResult(result)">
-      >
-      {{ result }}
-      </li>
-    </ul>
+      v-if="showDropdown && filteredResults.length"
+      class="dropdown"
+    >
+      <button class="close-btn" @click="closeDropdown">X</button>
+      <ul>
+        <li
+          v-for="(result, index) in filteredResults"
+          :key="index"
+          @click="selectResult(result)"
+        >
+          {{ result }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -90,9 +95,8 @@ export default defineComponent({
 </script>
 
 <style>
-
-.search{
-  margin: auto;
+.search-container {
+  position: relative;
   display: block;
   width: 80%;
   border-radius: 10em;
@@ -100,11 +104,12 @@ export default defineComponent({
 
 .dropdown {
   position: absolute;
-  top:-150%; /* adjust as needed */
-  background-color: white;
+  top: -150%; /* Adjust this value based on your layout */
+  left: 0;
+  width: 100%;
+  background: #fff;
   border: 1px solid #ccc;
-  width: 80%;
-  margin: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
