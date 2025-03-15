@@ -3,27 +3,23 @@
         <h1 class="col-10 text-center">Surf Smarter, Check Conditions First!</h1>
         <button class="btn btn-light  btn-report button-main">See map</button>
         <p class="text-center">-or-</p>
-        <input type="text" class="form-control search"  id="search" placeholder="Location name / ZipCode"/>
+        <SearchComponent/>
     </div>
 </template>
 
 <script>
 import { VIdeoBackground } from '#components';
+import SearchComponent from '~/components/SearchComponent.vue';
 
 export default {
   components: {
     VIdeoBackground,
+    SearchComponent,
   },
 }
 </script>
 
 <style scoped>
-.search{
-  margin: auto;
-  display: block;
-  width: 80%;
-  border-radius: 10em;
-}
 
 .btn-report{
   margin-bottom: 5%;
