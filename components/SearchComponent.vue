@@ -113,9 +113,9 @@ export default defineComponent({
   left: 0;
   width: 100%;
   min-height: 8em;
-  background: #fffffff3;
+  background: #ffffff;
   border: 1px solid #ccc;
-  box-shadow: 0 2px relative5px rgba(0, 0, 0, 0.2);
+  box-shadow: 50px 2px 1em 5px rgba(0, 0, 0, 0.11);
   z-index: 1000;
 }
 
