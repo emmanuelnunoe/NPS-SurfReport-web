@@ -1,0 +1,36 @@
+.DS_Store
+node_modules/
+dist/
+coverage/
+.env
+.vscode/
+npm-debug.log
+package-lock.json
+# Ignore build artifacts
+build/
+# Ignore temporary files
+*.tmp
+*.log
+# Ignore IDE specific files
+.idea/
+*.sublime-workspace
+*.sublime-project
+# Ignore OS generated files
+Thumbs.db
+ehthumbs.db
+.DS_Store   
+# Ignore test coverage reports
+coverage/
+# Ignore yarn lock file if using npm
+yarn.lock
+# Ignore lock files for other package managers
+pnpm-lock.yaml
+# Ignore specific configuration files
+config/*.json
+# Ignore specific directories
+temp/
+cache/
+# Ignore specific file types
+*.bak
+*.swp 
+                  

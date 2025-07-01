@@ -6,7 +6,7 @@ defineProps(['station']);
 <template>
 
   <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src= "../assets/Dynamic_wave_inkscape.png" alt="Station image">
+    <img class="card-img-top" src= "../assets/nps-3-fast-green-blue.png" alt="Station image">
     <div class="card-body">
       <h5 class="card-title">{{ station.name }}</h5>
       <p class="card-text">Id: {{ station.id }}</p>

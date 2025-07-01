@@ -27,7 +27,7 @@
         <NuxtLink to="/locations"  class="btn btn-primary mt-4 mb-4"> < Back</NuxtLink>
         <br/>
         <div class="text-center">
-        <img class="card-img-top" src= "../../assets/Dynamic_wave_inkscape.png" alt="Station image" style="width: 10%; height: 10%;">
+        <img class="card-img-top" src= "../../assets/Rombo-fast-fix-front.png" alt="Station image" style="width: 18%; height: 18%;">
         <h3>{{ name }}</h3>
         </div>
 
