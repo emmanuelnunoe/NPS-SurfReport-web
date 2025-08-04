@@ -8,7 +8,7 @@
       @input="onInput"
       @focus="showDropdown = true"
     />
-    <button class="btn btn-primary search-btn">Search</button>
+   <button class="btn btn-primary search-btn">Search</button>
 
     <div v-if="showDropdown && filteredResults.length" class="dropdown">
       <button class="close-btn" @click="closeDropdown">X</button>
@@ -99,30 +99,28 @@ export default defineComponent({
 
 <style>
 .search-btn{
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  border-radius: .5em;
+  width: 90%;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-inline-start: 1em;
 }
 .search-container {
-  position: relative;
-  display: block;
-  width: 80%;
-  border-radius: 10em;
-  padding-inline-start: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.search{
+  width: 90%;
+  padding: 6px;
+  margin-inline-start: 1em;
 }
 
 .dropdown {
-  position:absolute;
-  top: -8em; /* Adjust this value based on your layout */
-  left: 0;
   width: 100%;
-  min-height: 8em;
-  background: #ffffff;
-  border: 1px solid #ccc;
-  box-shadow: 50px 2px 1em 5px rgba(0, 0, 0, 0.11);
-  z-index: 1000;
+  padding: 6px;
+  background-color: #f0f0f0;
 }
 
 .close-btn {

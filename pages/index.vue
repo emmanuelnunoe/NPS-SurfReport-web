@@ -8,12 +8,10 @@
 </template>
 
 <script>
-import { VIdeoBackground } from '#components';
 import SearchComponent from '~/components/SearchComponent.vue';
 
 export default {
   components: {
-    VIdeoBackground,
     SearchComponent,
   },
 }
