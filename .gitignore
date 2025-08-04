@@ -33,4 +33,7 @@ cache/
 # Ignore specific file types
 *.bak
 *.swp 
+
+# Ignore Nuxt.js build artifacts
+.nuxt/
                   
