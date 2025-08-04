@@ -1,28 +1,30 @@
 <template>
+  <form class="d-flex" role="search">
   <div class="search-container" ref="searchContainer">
     <input
-      type="text"
+      type="search"
       v-model="query"
-      class="form-control search" 
-      placeholder="Search..."
+      class="form-control me-2 search" 
+      placeholder="Search"
       @input="onInput"
       @focus="showDropdown = true"
     />
-   <button class="btn btn-primary search-btn">Search</button>
-
-    <div v-if="showDropdown && filteredResults.length" class="dropdown">
-      <button class="close-btn" @click="closeDropdown">X</button>
-      <ul>
-        <li
-          v-for="(result, index) in filteredResults"
-          :key="index"
-          @click="selectResult(result)"
-        >
-          {{ result }}
-        </li>
-      </ul>
-    </div>
-  </div>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        
+          <div v-if="showDropdown && filteredResults.length" class="dropdown">
+            <button class="close-btn" @click="closeDropdown">X</button>
+            <ul>
+              <li
+              v-for="(result, index) in filteredResults"
+              :key="index"
+              @click="selectResult(result)"
+              >
+              {{ result }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
 </template>
 
 <script lang="ts">
@@ -99,29 +101,47 @@ export default defineComponent({
 
 <style>
 .search-btn{
-  width: 90%;
+  width: 20%;
   padding: 6px 12px;
   cursor: pointer;
-  margin-inline-start: 1em;
+  margin-inline-start: 5px;
+  white-space: nowrap; /* Keeps button text on one line */
+  max-width: 100px; /* Or use auto depending on your layout */
+  padding: 6px;
 }
 .search-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
 }
 
 .search{
-  width: 90%;
+  width: 70%;
   padding: 6px;
-  margin-inline-start: 1em;
+  margin-inline-start: .5em;
 }
 
-.dropdown {
-  width: 100%;
+input[type="search"] {
+  width: 250px; /* Fixed width prevents dynamic growth */
+  flex: 1;
   padding: 6px;
-  background-color: #f0f0f0;
+  min-width: 0; /* Prevents input from hogging space */
 }
+.dropdown {
+  position: absolute;
+  bottom: 100%; /* right below input */
+  left: 0; /* aligns with input’s left edge */
+  width: 250px; /* match input width */
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-inline-start: .5em;}
 
 .close-btn {
   background: none;
