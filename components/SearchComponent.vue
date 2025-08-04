@@ -8,12 +8,9 @@
       @input="onInput"
       @focus="showDropdown = true"
     />
-    <button class="btn btn-primary">Search</button>
+    <button class="btn btn-primary search-btn">Search</button>
 
-    <div
-      v-if="showDropdown && filteredResults.length"
-      class="dropdown"
-    >
+    <div v-if="showDropdown && filteredResults.length" class="dropdown">
       <button class="close-btn" @click="closeDropdown">X</button>
       <ul>
         <li
@@ -42,6 +39,7 @@ export default defineComponent({
       'React',
       'Angular',
       'JavaScript',
+      'Other Frameworks'
     ]);
     const filteredResults = ref<string[]>([]);
     const showDropdown = ref<boolean>(false);
@@ -100,11 +98,19 @@ export default defineComponent({
 </script>
 
 <style>
+.search-btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: .5em;
+}
 .search-container {
   position: relative;
   display: block;
   width: 80%;
   border-radius: 10em;
+  padding-inline-start: 3em;
 }
 
 .dropdown {

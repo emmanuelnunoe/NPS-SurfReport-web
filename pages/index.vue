@@ -1,6 +1,6 @@
 <template>
     <div class="background-main">
-        <h1 class="col-10 text-center">Surf Smarter, Check Conditions First!</h1>
+        <h1 class="col-10 text-center">Surf Smart, Check Conditions First!</h1>
         <button class="btn btn-light  btn-report button-main">See map</button>
         <p class="text-center">-or-</p>
         <SearchComponent/>
