@@ -104,26 +104,24 @@ export default defineComponent({
   width: 20%;
   padding: 6px 12px;
   cursor: pointer;
-  margin-inline-start: 5px;
+  margin-inline-start: 3px;
   white-space: nowrap; /* Keeps button text on one line */
   max-width: 100px; /* Or use auto depending on your layout */
   padding: 6px;
 }
 .search-container {
-  gap: 5px;
+  gap: 2px;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
   position: relative;
 }
 
 .search{
-  width: 70%;
+  width: 50%;
   padding: 6px;
-  margin-inline-start: .5em;
+  margin-inline-start: 1.5em;
 }
 
 input[type="search"] {
@@ -141,7 +139,7 @@ input[type="search"] {
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 1;
-  margin-inline-start: .5em;}
+  margin-inline-start: 1.5em;}
 
 .close-btn {
   background: none;
