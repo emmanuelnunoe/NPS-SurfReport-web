@@ -17,14 +17,17 @@
               <li
               v-for="(result, index) in filteredResults"
               :key="index"
+              class="dropdown-item"
               @click="selectResult(result)"
               >
-              {{ result }}
+              {{ result.name }} ({{ result.state }})
             </li>
           </ul>
         </div>
       </div>
     </form>
+    <li class="test-hover">Vue.js</li>
+    
 </template>
 
 <script lang="ts">
@@ -32,39 +35,45 @@ import { defineComponent, ref, reactive, onMounted, onBeforeUnmount } from 'vue'
 
 export default defineComponent({
   name: 'SearchComponent',
-  setup() {
+  async setup() {
+    
+ interface Station {
+   id: number;
+  long_name: string;
+  name: string;
+  state: string;
+}
     // Reactive properties with type annotations
     const query = ref<string>('');
-    const items = ref<string[]>([
-      'Nuxt.js',
-      'Vue.js',
-      'React',
-      'Angular',
-      'JavaScript',
-      'Other Frameworks'
-    ]);
+   const items = ref<Station[]>([]);
+   
     const filteredResults = ref<string[]>([]);
     const showDropdown = ref<boolean>(false);
     const searchContainer = ref<HTMLDivElement | null>(null);
 
     const onInput = () => {
-      filteredResults.value = items.value.filter((item) =>
-        item.toLowerCase().includes(query.value.toLowerCase())
-      );
-      if(query.value === '') {
+      const queryText = query.value.trim().toLowerCase();
+
+      if(queryText === '') {
         filteredResults.value = [];
         showDropdown.value = false;
-      }else{
-        showDropdown.value = true;
+        return;
       }
+      // Filter items based on the query
+      filteredResults.value = items.value.filter((item) =>
+        item.name.toLowerCase().includes(queryText)
+      );
+
+      showDropdown.value = filteredResults.value !=null ;
+
     };
 
     const closeDropdown = () => {
       showDropdown.value = false;
     };
 
-    const selectResult = (result: string) => {
-      query.value = result; // Populate the search box with the selected result
+    const selectResult = (result: TideStation) => {
+      query.value = result.name; // Populate the search box with the selected result
       closeDropdown();
     };
 
@@ -85,9 +94,22 @@ export default defineComponent({
       document.removeEventListener('click', onClickOutside);
     });
 
+    const {data, error, pending } = await useFetch( `https://noaa-tides.p.rapidapi.com/stations/`,{
+        headers:{
+            'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com',
+            'X-RapidAPI-Key': '554b5a7e53msh1202eed08caa67bp16d5adjsnb39915c07f4b'
+        }
+        
+    });
+    console.log(data.value);
+    if (data.value && Array.isArray(data.value.stations)) {
+      items.value = data.value?.stations ?? [];
+      console.log('Stations loaded:', items.value.length);
+      }
+
     return {
       query,
-      items,
+      data,
       filteredResults,
       showDropdown,
       searchContainer,
@@ -99,7 +121,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 .search-btn{
   width: 20%;
   padding: 6px 12px;
@@ -161,7 +183,9 @@ li {
   cursor: pointer;
 }
 
-li:hover {
-  background-color: #f0f0f0;
+:deep(.dropdown-item:hover) {
+  background-color: #e0f7fa;
+  color: #00796b;
 }
 </style>
+
