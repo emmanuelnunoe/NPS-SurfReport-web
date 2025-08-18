@@ -11,7 +11,7 @@
     />
           <button class="btn btn-outline-success" type="submit">Search</button>
         
-          <div v-if="showDropdown && filteredResults.length" class="dropdown">
+          <div v-if="showDropdown && filteredResults.length" class="dropdown-results">
             <button class="close-btn" @click="closeDropdown">X</button>
             <ul>
               <li
@@ -152,11 +152,11 @@ input[type="search"] {
   padding: 6px;
   min-width: 0; /* Prevents input from hogging space */
 }
-.dropdown {
+.dropdown-results {
   position: absolute;
   bottom: 100%; /* right below input */
   left: 0; /* aligns with input’s left edge */
-  width: 250px; /* match input width */
+  width:100%; /* match input width */
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
